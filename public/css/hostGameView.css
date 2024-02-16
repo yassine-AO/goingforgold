@@ -1,0 +1,348 @@
+body {
+    display: block;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    height: 100vh; /* Use the full height of the viewport */
+    background-image: url('/assets/background.png');
+    background-size: cover;
+    background-position: center;
+    margin: 0;
+}
+
+#gifgold {
+    
+    width: 200px; 
+    height: auto; 
+}
+
+#hemlogo {
+    
+    width: 180px; 
+    height: auto; 
+}
+#lci {
+    width: 200px; 
+    height: auto; 
+}
+
+.logos {
+    margin-top: 5px;
+    display: flex;
+    justify-content: space-between; /* Place items at each end of the container */
+    align-items: center; /* Center items vertically within the container */
+}
+
+#SHOW {
+    padding: 20px;
+    background: rgba(255, 255, 255, 0.438); /* Semi-transparent background for content area */
+    border-radius: 15px ;
+    border: 2px solid rgba(255,215,0);
+    width: 1200px; /* Fixed width */
+    max-width: 1200px; /* Maximum width */
+    margin: 100px auto 50px; /* Top margin increased to 100px, bottom margin 50px */
+}
+
+#answer1 {
+    /* Styles existants */
+    background-image: url("/assets/answer1.png");
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    color: rgb(255, 255, 255);
+    margin: 20px auto;/* Ajoute un peu d'espace en haut et en bas */
+    padding: 30px 20px;
+    border-radius: 10px;
+    font-family: 'Raleway', sans-serif;
+    font-size: 25px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 80%;
+    height: auto;
+    margin-left: -200px; /* Déplace le conteneur vers la gauche */
+    margin-right: auto; /* Réinitialise la marge à droite */
+}
+
+#answer2 {
+    /* Styles existants */
+    background-image: url("/assets/answer2.png");
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    color: white;
+    margin: -108px auto 10px; /* Remonte légèrement le conteneur et ajoute un peu d'espace en bas */
+    padding: 30px 20px;
+    border-radius: 10px;
+    font-family: 'Raleway', sans-serif;
+    font-size: 25px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 80%;
+    height: auto;
+    margin-right: -210px; /* Déplace le conteneur vers la droite */
+    margin-left: auto; /* Réinitialise la marge à gauche */
+}
+
+
+
+
+#answer3 {
+    /* Styles existants */
+    background-image: url("/assets/answer3.png");
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    color: white;
+    margin: 20px auto; /* Remonte légèrement le conteneur */
+    padding: 30px 20px;
+    border-radius: 10px;
+    font-family: 'Raleway', sans-serif;
+    font-size: 25px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 80%;
+    height: auto;
+    margin-left: -200px; /* Déplace le conteneur vers la gauche */
+    margin-right: auto; /* Réinitialise la marge à droite */
+}
+
+#answer4 {
+    /* Styles existants */
+    background-image: url("/assets/answer4.png");
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    color: white;
+    margin: -108px auto 20px; /* Remonte légèrement le conteneur et ajoute un peu d'espace en bas */
+    padding: 30px 20px;
+    border-radius: 10px;
+    font-family: 'Raleway', sans-serif;
+    font-size: 25px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 80%;
+    height: auto;
+    margin-right: -210px; /* Déplace le conteneur vers la droite */
+    margin-left: auto; /* Réinitialise la marge à gauche */
+}
+
+
+
+
+.answer-pair {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 10px auto;
+}
+
+h1, h2, h3, h4 {
+    font-family: 'Raleway', sans-serif;
+}
+
+.container {
+    max-width: 800px; /* Adjust as needed */
+}
+
+
+
+
+.square {
+    display: block; /* Make it a block element */
+    height: 30px; /* Set a fixed height for all bars */
+    width: 0%; /* Initial width to 0 */
+    margin: 10px 0; /* Add some margin for spacing */
+    transition: width 0.5s ease-in-out; /* Animate the width change */
+    text-align: right; /* Text aligned to the right */
+    line-height: 30px; /* Center the text vertically */
+    color: white; /* Text color */
+    border-radius: 5px; /* Round the corners of the bars */
+    position: relative;
+    
+}
+
+/* Background colors for each bar */
+#square1 { background-color: #4CAF50; }
+#square2 { background-color: #f94a1e; }
+#square3 { background-color: #3399ff; }
+#square4 { background-color: #ff9933; }
+
+.total {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 20px; /* Adjust font size to make it bigger */
+    color: #fff; /* Set text color if needed */
+    font-weight: bold; /* Optional: makes the text bold */
+}
+
+
+#nextQButton {
+    background-color: #28a745; /* Bootstrap success color */
+    color: white;
+    padding: 10px 20px;
+    border-radius: 5px;
+    margin-top: 20px;
+}
+
+#question {
+    color: white;
+    font-family: 'Raleway', sans-serif;
+    border: 2px solid rgba(153, 152, 152, 0.2);
+    padding: 10px; 
+    margin: 20px 0; 
+    border-radius: 10px; 
+    background-color: rgb(0, 0, 0); 
+    display: inline-block; 
+    font-size: 35px;
+}
+
+
+#timerText{
+    color: rgb(0, 0, 0);
+    font-family: 'Raleway', sans-serif;
+    font-size: 25px;
+}
+#num{
+    font-family: 'Tajawal', sans-serif;
+    font-size: 35px;
+}
+#playersAnswered{
+    color: rgb(0, 0, 0);
+    font-family: 'Tajawal', sans-serif;
+    font-size: 25px;
+}
+#questionNum{
+    color: rgb(0, 0, 0);
+    font-family: 'Tajawal', sans-serif;
+    font-size: 25px;
+}
+
+#nextQButton:hover {
+    background-color: #218838;
+}
+
+#winner1{
+    font-family: 'Raleway', sans-serif;
+    text-align: center;
+    font-size: 30px;
+    display: none;
+}
+#winner2{
+    font-family: 'Raleway', sans-serif;
+    text-align: center;
+    font-size: 22px;
+    display: none;
+}
+#winner3{
+    font-family: 'Raleway', sans-serif;
+    text-align: center;
+    font-size: 20px;
+    display: none;
+}
+#winner4{
+    font-family: 'Raleway', sans-serif;
+    text-align: center;
+    display: none;
+}
+#winner5{
+    font-family: 'Raleway', sans-serif;
+    text-align: center;
+    display: none;
+}
+#winnerTitle{
+    text-align: center;
+    font-family: 'Raleway', sans-serif;
+    font-size: 35px;
+    color: #3399ff;
+    display: none;
+}
+
+.hidden {
+    display: none;
+}
+
+
+@media (max-width: 768px) {
+    #answer1, #answer2, #answer3, #answer4 {
+        width: 100%;
+    }
+}
+
+
+
+
+.player-name {
+    font-size: 20px;
+    color: #ffffff;
+    font-weight: bold;
+    padding: 5px 10px;
+    margin: 5px 0;
+    border-radius: 5px;
+    display: block;
+    text-align: center;
+    background: rgba(0, 0, 0, 0.7);
+}
+
+
+#leaderboardTitle {
+    text-align: center;
+    font-size: 32px;
+    color: #ffd700;
+    margin-bottom: 20px;
+}
+
+#leaderboard {
+    background-color: #00000076;
+    border: 6px solid #ffa200; /* Add border with desired color */
+    background-size: crgb(255, 170, 0); /* Cover the entire area of the box */
+    background-position: center; /* Center the background image */
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(150px, 1fr)); /* Grid layout */
+    gap: 10px; /* Space between grid items */
+    padding: 20px; /* Padding inside the box */
+    border-radius: 10px; /* Rounded corners */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Optional: adding a shadow */
+    color: white; /* Text color */
+}
+
+.player-entry {
+    margin-top: 10px;
+    background: #78d07b;
+    color: #000000;
+    border: 1px solid #00a800;
+    padding: 1rem;
+    border-radius: 10px;
+    text-align: center;
+    
+}
+
+.player-entry .player-rank {
+    font-size: 20px;
+    color: #ffd700;
+    font-weight: bold;
+
+}
+
+.player-entry .player-score {
+    font-size: 18px;
+    font-weight: bold;
+    color: #ffffff;
+
+}
+
+.to-be-removed {
+    background: #e16969;
+    border: 1px solid #de0000;
+}
+
+#countdown-container {
+    text-align: center;
+    font-size: 50px;
+    margin-top: 50px;
+}

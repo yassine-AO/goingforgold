@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Dashboard</title>
+        <link rel="stylesheet" href="../css/create.css">
+        <link rel="icon" href="/assets/icon.png" type="image/x-icon">
+        <link rel="shortcut icon" href="/assets/icon.png" type="image/x-icon">
+    </head>
+    <body>
+        <div>
+            <h1 id="title">Admin Dashboard</h1>
+            <a id="link" href="quiz-creator/" class="buttoncreate">Create a Quiz</a>
+            <button id="refreshButton" class="buttoncreate">Refresh</button>
+            <h4 id="subtitle">Choose a Game Below</h4>
+            <div id="game-list">
+                <!-- Game list content ghykon hna -->
+            </div>
+        </div>
+        
+        <script src="../socket.io/socket.io.js"></script>
+        <script src="../js/create.js"></script>
+
+        <script>
+            document.getElementById('refreshButton').addEventListener('click', function() {
+                socket.emit('refreshGames');
+            });
+        </script>
+
+    </body>
+</html>

@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>leaderboard</title>
+<style>
+    body {
+        margin: 0;
+        padding: 0;
+        overflow: hidden; /* Hide scrollbar */
+        display: flex;
+        flex-direction: column;
+        align-items: center; /* Center horizontally */
+        height: 100vh; /* Take full height of viewport */
+        background-color: black;
+    }
+    #container {
+        width: 100%; /* Adjust as needed */
+        height: 120%;
+        overflow-y: auto; /* Add scrollbar if needed */
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center; /* Center boxes horizontally */
+        background-image: url("/assets/background.png");
+        gap: 5px;
+
+    }
+
+    .box {
+        width: calc(100% / var(--columns)); 
+        height: calc(100vh / var(--rows)); 
+        margin: 0;
+        padding: 10px;
+        box-sizing: border-box;
+        background-color: #78d07b; /* Soft green color */
+        border-radius: 5px;
+        border: 5px solid #3a9d00; /* Gold color */
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-family: Arial, sans-serif; /* Simple font */
+        font-size: large;    
+        color: #ffffff;
+        font-weight: bold;
+    }
+
+    .boxtoremove {
+        width: calc(100% / var(--columns)); 
+        height: calc(100vh / var(--rows)); 
+        margin: 0;
+        padding: 10px;
+        box-sizing: border-box;
+        background-color: #e16969; /* Soft red color */
+        border-radius: 5px;
+        border: 5px solid #b50000; /* Gold color */
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-family: Arial, sans-serif; /* Simple font */
+        font-size:large;
+        color: #ffffff;
+        font-weight: bold;
+    }
+    #text{
+        background: rgba(0, 0, 0, 0.5);
+        border-radius: 5px;
+        border: 2px solid black;
+        text-align: center;
+    }
+    #textremove{
+        background: rgba(0, 0, 0, 0.5);
+        border-radius: 5px;
+        border: 2px solid black;
+        text-align: center;
+    }
+    
+
+
+    #buttonContainer {
+        margin-top: 5px; /* Adjust as needed */
+    }
+
+    #scoree{
+        color: rgb(255, 200, 0);
+    }
+
+    .botona{
+        background-color: #4CAF50;
+    }
+</style>
+</head>
+<body>
+
+    <div id="container">
+            <script>
+
+                function closeWindow(){
+                    window.close();
+                }
+
+                // Retrieve the leaderboard data from localStorage
+                var leaderboardData = JSON.parse(localStorage.getItem('leaderboardData'));
+                var playerPercentage = JSON.parse(localStorage.getItem('playerPercentage'));
+
+                // Replace this variable with the actual number of boxes (X)
+                var numBoxes = leaderboardData.length;
+
+                // Calculate the number of columns and rows
+                var sqrt = Math.sqrt(numBoxes);
+                var columns = Math.ceil(sqrt);
+                var rows = Math.ceil(numBoxes / columns) + 3;
+
+                // Set CSS custom properties to pass values to the CSS
+                document.documentElement.style.setProperty('--columns', columns);
+                document.documentElement.style.setProperty('--rows', rows);
+
+
+
+                leaderboardData.forEach((player, index) => {
+
+
+                    
+                    if (index >= leaderboardData.length - playerPercentage) {
+                        document.write("<div class='boxtoremove'><div id='textremove'>" + (index + 1) + '.' + " "  + player.name + "<br> <div id = 'scoree'>"+ 'Score: ' +player.gameData?.score +"</div></div></div>");
+                    }
+                    else{
+                        document.write("<div class='box'><div id='text'>" + (index + 1) + '.' + " " + player.name + "<br> <div id = 'scoree'>"+ 'Score: ' +player.gameData?.score +"</div></div></div>");
+                    }
+                            
+                });
+
+        </script>
+    </div>
+
+
+    <div id="buttonContainer">
+        <button id="botona" onclick="closeWindow()">Close</button>
+    </div>
+
+</body>
+</html>

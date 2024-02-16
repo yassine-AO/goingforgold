@@ -1,0 +1,38 @@
+#question-field {
+    border-style: groove;
+    border-width: 1px;
+    padding: 10px;
+    margin-bottom: 20px;
+    background-color: #fff;
+}
+
+.question, .correct, #name {
+    width: 100%;
+    padding: 8px;
+    margin: 5px 0;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    box-sizing: border-box;
+    font-family: 'Raleway', sans-serif;
+}
+
+.correct {
+    width: 50px;
+    text-align: center;
+}
+
+#title, #quizTitle {
+    font-family: 'Raleway', sans-serif;
+}
+
+.btn {
+    margin: 10px;
+    padding: 10px 20px;
+}
+
+/* Additional responsiveness */
+@media (max-width: 768px) {
+    .question, .correct {
+        width: 100%;
+    }
+}

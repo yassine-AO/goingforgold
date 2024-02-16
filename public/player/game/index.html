@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Game</title>
+    <link rel = "stylesheet" href = "../../css/playerGameView.css">
+    <link rel="icon" href="/assets/icon.png" type="image/x-icon">
+    <link rel="shortcut icon" href="/assets/icon.png" type="image/x-icon">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+</head>
+<body>
+     <div class="logos">
+        <img id="gifgold" src="/assets/gifgold.gif">
+        <img id="hemlogo" src="/assets/hem.png">
+    </div>
+    
+    
+   <div class="container">
+     <h4><span id="nameText"></span></h4>
+     <h4><span id="scoreText"></span></h4>
+    
+   
+     <h2 id="message" ></h2>
+     <br>
+     <img id="messageimg">
+     <img id="monkey">
+     <img id="guysad">
+     
+        <div class="answer12">
+        <button onclick="answerSubmitted(1)" id="answer1" ></button>
+        <button onclick="answerSubmitted(2)" id="answer2" ></button>
+        </div>
+
+
+        <div class="answer34" >
+        <button onclick="answerSubmitted(3)" id="answer3" ></button>
+        <button onclick="answerSubmitted(4)" id="answer4" ></button>
+        </div>
+    </div>
+
+    <div class="logo-container">
+        <img src="/assets/lci.png" alt="Logo">
+    </div>
+
+
+    
+
+   
+
+    <script src="../../socket.io/socket.io.js"></script>
+    <script src="../../js/libs/jqueryLibrary.js"></script>
+    <script src="../../js/libs/deparam.js"></script>
+    <script src="../../js/playerGame.js"></script>
+</body>
+</html>

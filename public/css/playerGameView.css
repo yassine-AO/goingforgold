@@ -1,0 +1,147 @@
+@font-face {
+    font-family: 'pixel';
+    src: url('/assets/font.ttf');
+}
+
+
+body {
+    background-image: url('/assets/background.png');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    font-family: 'pixel' , cursive;
+}
+
+
+#gifgold {
+    width: 200px; /* Adjust the width as needed */
+    height: auto; /* Maintain aspect ratio */
+}
+#hemlogo {
+    width: 180px; /* Adjust the width as needed */
+    height: auto; /* Maintain aspect ratio */
+}
+.logos {
+    display: flex;
+    justify-content: space-between; /* Place items at each end of the container */
+    align-items: center; /* Center items vertically within the container */
+}
+
+.gif_container{
+    background-color: rgba(0, 0, 0, 0.7);
+    border-radius: 10px;
+    text-align: center;
+    border: 2px solid orange;
+}
+
+.container {
+    background-color: rgba(0, 0, 0, 0.7);
+    border-radius: 10px;
+    padding: 20px;
+    text-align: center;
+    border: 2px solid orange;
+    width: auto;
+    height: 450px;
+    
+    /* Center the container horizontally and vertically */
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.logo-container {
+            text-align: center;
+            position: fixed; /* or position: absolute; */
+            bottom: 0;
+            left: 50%;
+            transform: translateX(-50%);
+}
+.logo-container img {
+    width: 200px; /* Adjust the width as needed */
+    height: auto; /* Maintain aspect ratio */
+}
+#nameText,
+#scoreText {
+    color: white; /* You can adjust the text color */
+    font-family: 'pixel' , cursive;
+    font-size: medium;
+    
+}
+  
+
+
+
+#message {
+    text-align: center;
+    font-size: 35px;
+    color: #afafaf;
+    margin-bottom: 20px;
+}
+
+#messageimg {
+    width: 200px;
+    height: auto; /* Maintain the aspect ratio */
+    margin: 0 auto; /* Center the images horizontally */
+    display: block; /* Display as block-level elements */
+}
+
+#guysad{
+    width: 170px;
+    height: auto;
+    margin: 0 auto; /* Center the images horizontally */
+    display: block; 
+}
+#monkey {
+    width: 130px;
+    height: auto;
+    margin: 0 auto; /* Center the images horizontally */
+    display: block; 
+}
+
+
+
+
+#answer1,
+#answer2,
+#answer3,
+#answer4 {
+    width: 100px;
+    height: 100px;
+    margin: 15px; /* Set margin to 0 */
+    padding: 0; /* Set padding to 0 */
+    border: none; /* Remove border */
+    background-color: transparent; /* Set background color to transparent */
+}
+
+.answer12,
+.answer34 {
+    display: flex;
+    justify-content: center;
+}
+
+#answer1 {
+    background-image: url("/assets/playeranswer1.png");
+    background-size: 100% 100%; /* Make sure the background image covers the container */
+    background-repeat: no-repeat;
+}
+
+
+#answer2 {
+    background-image: url("/assets/playeranswer2.png");
+    background-size: 100% 100%; /* Make sure the background image covers the container */
+    background-repeat: no-repeat;
+}
+
+#answer3 {
+    background-image: url("/assets/playeranswer3.png");
+    background-size: 100% 100%; /* Make sure the background image covers the container */
+    background-repeat: no-repeat;
+}
+
+#answer4 {
+    background-image: url("/assets/playeranswer4.png");
+    background-size: 100% 100%; /* Make sure the background image covers the container */
+    background-repeat: no-repeat;
+}

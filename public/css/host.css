@@ -1,0 +1,144 @@
+body {
+    font-family: 'Arial', sans-serif; /* Choose a font that suits your style */
+    background-image: url("/assets/background.png"); /* Background color for the body */
+    text-align: center; /* Center-aligning the content */
+    padding: 20px; /* Padding for the body */
+}
+
+#title {
+    font-size: 30px;
+    color: #dbd7d7; /* Color for the title */
+    margin-bottom: 20px; /* Space below the title */
+    margin-top: 30px; 
+}
+#titleQR {
+    margin-top: 80px;
+    color: #dbd7d7;
+    margin-right: 20px;
+}
+
+#player_counter {
+    font-size: 25px;
+    color: #bbbaba; /* Color for the player counter */
+    margin-bottom: 10px; /* Space below the player counter */
+}
+
+
+
+.player-list {
+    background-color: #00000076;
+    border: 6px solid #ffa200; /* Add border with desired color */
+    background-size: crgb(255, 170, 0); /* Cover the entire area of the box */
+    background-position: center; /* Center the background image */
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(150px, 1fr)); /* Grid layout */
+    gap: 10px; /* Space between grid items */
+    padding: 20px; /* Padding inside the box */
+    border-radius: 10px; /* Rounded corners */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Optional: adding a shadow */
+    width: 1350px; /* Fixed width */
+    height: 765px; /* Fixed height */
+    margin-left: auto; /* Pushes the box to the right */
+    margin-right: -20px; /* Specific right margin */
+    color: white; /* Text color */
+    overflow-y: auto; /* Enable vertical scrolling if content overflows */
+}
+
+#hem{
+    width : 170px;
+}
+
+#logooo{
+    width : 300px;
+    margin-top: 20px; 
+}
+.game-container {
+    display: flex;
+    justify-content: space-between; /* Aligns children (info and list) side by side */
+}
+
+.game-info {
+    /* Style as needed, adjust width to manage spacing */
+    max-width: 300px; /* Adjust as needed */
+}
+
+#qr-code {
+    /* Style for the QR code image */
+    max-width: 100%; /* Ensures the image does not exceed the container width */
+    height: auto;
+    margin-top: 20px; /* Space above the image */
+    margin-right: 20px;
+}
+
+.player-box {
+    background-color: #ffffff; /* Background color of the box */
+    max-width: 900px; /* Maximum width of the box */
+    margin: 20px auto; /* Centering the box */
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Adding a subtle shadow */
+    text-align: center;
+}
+
+.button-container {
+    display: flex;
+    justify-content: center; /* Center the buttons */
+    gap: 10px; /* Space between buttons */
+    margin-top: 40px; /* Space above the buttons */
+    margin-right: 15px;
+}
+
+#start {
+    background-color: #28a745; /* Green color for start */
+}
+
+#cancel {
+    background-color: #dc3545; /* Red color for cancel */
+}
+
+button {
+    padding: 10px 20px;
+    font-size: 15px;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+
+
+
+.player-card {
+    position: relative;
+    display: inline-block;
+    width: 150px; /* Adjust the width as needed to fit the name */
+    height: 110px; /* Same as width for a square aspect ratio */
+    margin: 5px;
+    margin-top: 25px; /* Space from the top */
+    border-radius: 10px; /* Optional: if you want rounded corners */
+}
+
+.player-image {
+    width: 100%;
+    height: 100%;
+    display: block;
+    object-fit: cover; /* If you want to maintain aspect ratio without stretching */
+    border-radius: 10px; /* Optional: if you want rounded corners */
+}
+
+.player-name {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%); /* Centers the text */
+    color: #ffffff; /* Text color for readability */
+    padding: 2px 5px;
+    border-radius: 5px; /* Slight rounding on text background */
+    font-size: 1.2em; /* Adjust font size for readability */
+    font-weight: bold; /* Bold text */
+    max-width: 90%; /* Maximum width of the text to ensure padding inside the image */
+    text-align: center;
+    overflow: hidden; /* Ensures text doesn't overflow */
+    text-overflow: ellipsis; /* Adds an ellipsis to text that overflows */
+    white-space: nowrap; /* Keeps text on a single line */
+}

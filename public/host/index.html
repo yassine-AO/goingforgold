@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Goin For GOLD</title>
+        <link rel="stylesheet" href="../css/host.css"> 
+        <link rel="icon" href="/assets/icon.png" type="image/x-icon">
+        <link rel="shortcut icon" href="/assets/icon.png" type="image/x-icon">
+    </head>
+    <body>
+
+        <div class="game-container">
+
+            <div class="game-info">
+            <img src="/assets/hem.png" id="hem" />
+            <img src="/assets/gifgold.gif" id="logooo" />
+            <h2 id="title">Le Jeu Démarre...</h2>
+
+                <h2 id='player_counter'></h2>
+                <h3 id="titleQR">Scanner le Code QR pour nous Rejoindre :</h3>
+                <img src="/assets/qrr.png" alt="QR Code" id="qr-code" />
+                <div class="button-container">
+                    <button id='start' onclick="startGame()">Commencer</button>
+                    <button id='cancel' onclick="endGame()">Annuler</button>
+                </div>
+
+            </div>
+            <div id="player-list" class="player-list"></div> 
+        </div>
+
+
+
+
+        <script src="../socket.io/socket.io.js"></script>
+        <script src="../js/libs/jqueryLibrary.js"></script>
+        <script src="../js/libs/deparam.js"></script>
+        <script src="../js/host.js"></script>
+    </body>
+</html>

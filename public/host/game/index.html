@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Host Game</title>
+    <link rel="stylesheet" href="../../css/hostGameView.css">
+    <link rel="icon" href="/assets/icon.png" type="image/x-icon">
+    <link rel="shortcut icon" href="/assets/icon.png" type="image/x-icon">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body>
+    <div>
+        <div class="logos">
+            <img id="lci" src="/assets/lci.png">
+            <img id="gifgold" src="/assets/gifgold.gif">
+            <img id="hemlogo" src="/assets/hem.png">
+        </div>
+
+        <div id="SHOW">
+            <h4 id="playersAnswered">Joueurs répondu : 0 / x</h4>
+            <div class="timer">
+                <h3 id="timerText">Temps restant ⏰ :<span id="num" style=" font-size: 80px; color: rgb(255, 0, 0); font-weight: bold;"> 10</span></h3>
+            </div>
+            
+            <div id="statscontainer">
+                <div class="square" id="square1"><span class="total" id="total1">%</span></div>
+                <div class="square" id="square2"><span class="total" id="total2">%</span></div>
+                <div class="square" id="square3"><span class="total" id="total3">%</span></div>
+                <div class="square" id="square4"><span class="total" id="total4">%</span></div>
+            </div>
+                
+            <h2 id="question">Question</h2>
+
+            <div class="answer-pair">
+                <h3 id="answer1">Answer</h3>
+                <h3 id="answer2">Answer</h3>
+            </div>
+
+            <div class="answer-pair">
+                <h3 id="answer3">Answer</h3>
+                <h3 id="answer4">Answer</h3>
+            </div>
+
+            <!-- Countdown within the question area -->
+            <div id="countdown-container">
+                <h3 id="countdown"></h3>
+            </div>
+            
+            <h2 id="winnerTitle"></h4>
+            <h3 id="winner1">1.</h3>
+            <h3 id="winner2">2.</h3>
+            <h3 id="winner3">3.</h3>
+            <h3 id="winner4">4.</h3>
+            <h3 id="winner5">5.</h3>
+        </div>
+        
+        <br>
+        <button onclick="nextQuestion()" id="nextQButton">Question Suivante</button>
+    </div>
+
+    <!-- Leaderboard Title -->
+    <div id="leaderboard-container">
+        <h2 id="leaderboardTitle">Leaderboard</h2>
+        <div id="leaderboard" class="leaderboard-grid">
+            <div class="player-entry">
+                <div class="player-rank">1.</div>
+                <div class="player-name"></div>
+                <div class="player-score"></div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Audio for Correct Answer -->
+    <audio id="correctAudio" src="/audios/Correct_answer.mp3"></audio>
+    <!-- Audio for Countdown -->
+    <audio id="countdownAudio" src="/audios/Countdown 3 seconds timer.wav"></audio>
+    <audio id="clockticking" src="/audios/clockticking.mp3"></audio>
+
+    <script src="../../socket.io/socket.io.js"></script>
+    <script src="../../js/libs/jqueryLibrary.js"></script>
+    <script src="../../js/libs/deparam.js"></script>
+    <script src="../../js/hostGame.js"></script>
+</body>
+</html>

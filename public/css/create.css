@@ -1,0 +1,83 @@
+
+
+body {
+    background-color: darkgray;
+}
+
+#title {
+    font-family: 'Raleway', sans-serif;
+    font-size: 50px;
+    margin-left: 400px;
+    display: inline-block;
+}
+
+#subtitle {
+    font-family: 'Raleway', sans-serif;
+    font-size: 20px;
+    margin-left: 500px;
+}
+
+#link {
+    color: white;
+}
+
+
+
+#gameButton {
+    font-size: 25px; /* Adjusted for normal button size */
+    background-color: #ffaa00; /* Bootstrap success color */
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.2s;
+}
+
+#gameButton:hover {
+    background-color: #000000; /* Darker shade on hover */
+}
+
+
+#game-list {
+    text-align: center;
+    padding: 20px;
+}
+
+.game-button {
+    background-color: #007bff; /* Bootstrap primary color */
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    margin: 5px;
+    border-radius: 5px;
+    font-family: 'Raleway', sans-serif;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.2s;
+}
+
+.game-button:hover {
+    background-color: #0056b3; /* Darker shade on hover */
+}
+
+.buttoncreate {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #000000; /* Button color /
+    color: white; / Text color */
+    text-align: center;
+    text-decoration: none;
+    font-size: 16px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-left:200px ;
+    font-family: 'Raleway', sans-serif;
+ 
+}
+
+#refreshButton {
+    color: white; 
+    background-color: red;
+}
