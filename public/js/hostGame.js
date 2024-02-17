@@ -75,9 +75,6 @@ socket.on('gameQuestions', function(data){
     // Start countdown before question starts
     countdownBeforeQuestion();
     var clockticking = document.getElementById("clockticking");
-    setTimeout(function() {
-        clockticking.play();
-    }, 4000); 
     
 
     document.getElementById('leaderboard-container').style.display = "none"; // Hide the leaderboard container
